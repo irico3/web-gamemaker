@@ -30,21 +30,37 @@ export const Layer: VFC<LayerType> = ({ meta, children }) => (
 
 const ContainerCss = styled(Container)`
   & h1 {
-    font-size: 2rem;
+    font-size: 23px;
     font-weight: bold;
-    padding:30px 0;
+  }
+  @media only screen and (min-width: 768px) {
+    & h1 {
+      padding:30px 0;
+      font-size: 30px;
+    }
   }
   & h1 + * {
     padding-top: 0;
   }
   & h2 {
-    font-size: 1.5rem;
+    font-size: 18px;
     font-weight: bold;
     padding-top: 20px;
+  }
+  @media only screen and (min-width: 768px) {
+    & h2 {
+      font-size: 23px;
+    }
   }
   & p {
     padding-top: 30px;
     line-height: 1.8;
+    font-size: 14px;
+  }
+  @media only screen and (min-width: 768px) {
+    & p {
+      font-size: 16px;
+    }
   }
 
   & a {

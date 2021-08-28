@@ -1,8 +1,8 @@
 import { VFC, ReactNode } from 'react'
 import { Flex, Box, Heading, Text, HStack, Button, useColorMode, useColorModeValue, MenuButton, MenuList, MenuItem, Menu } from '@chakra-ui/react'
 import { ChevronDownIcon } from '@chakra-ui/icons'
+import { useBreakpointValue } from '@chakra-ui/react';
 import Link from '../components/link'
-import { useRouter } from 'next/router';
 
 
 type NavLinkProps = {
@@ -10,9 +10,7 @@ type NavLinkProps = {
   children: ReactNode
 }
 const NavLink: VFC<NavLinkProps> = ({ href, children }) => {
-  const router = useRouter()
   const btnOnColor = useColorModeValue('gray.200', 'gray.700')
-  const btnOffColor = useColorModeValue('white', 'gray.800')
   return (
     <Link
       px={2}
@@ -30,6 +28,11 @@ const NavLink: VFC<NavLinkProps> = ({ href, children }) => {
 
 export const Header: VFC = () => {
   const { colorMode, toggleColorMode } = useColorMode()
+  const isSp = useBreakpointValue([true, true, false])
+  const reseModeTxt = (str: string) => {
+    return isSp ? str.slice(-2) : str
+  }
+
   return (
     <Box as="header">
       <Heading px={'6'} bg={useColorModeValue("red.400", "red.600")}>GameMaker Studio2 JP Club</Heading>
@@ -47,6 +50,7 @@ export const Header: VFC = () => {
         borderColor={'gray.200'}
         justifyContent={'space-between'}
         align={'center'}
+        css={'overflow: scroll'}
       >
         <HStack as={'nav'} spacing={4}>
           <NavLink href='/' >Home</NavLink>
@@ -60,8 +64,8 @@ export const Header: VFC = () => {
             </MenuList>
           </Menu>
         </HStack>
-        <Button colorscheme="blue" onClick={toggleColorMode}>
-          {colorMode === 'light' ? 'ダークモード🌙' : 'ライトモード☀️'}
+        <Button colorscheme="blue" onClick={toggleColorMode} ml="5">
+          {colorMode === 'light' ? reseModeTxt('ダークモード🌙') : reseModeTxt('ライトモード☀️')}
         </Button>
       </Flex>
     </Box >
