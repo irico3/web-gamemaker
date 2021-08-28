@@ -1,0 +1,25 @@
+import { Layer } from '../components/layer'
+import Head from 'next/head'
+
+# このサイトについて
+
+[GameMaker Studio2](https://www.yoyogames.com/en/get)は、2Dのゲーム開発に特化したゲームエンジンです。  
+[Undertale](https://undertale.jp/)や[Va-11 Hall-A](https://store.steampowered.com/app/447530/VA11_HallA_Cyberpunk_Bartender_Action/)など有名タイトルを輩出しており
+海外のインディーズ界隈では非常に人気のあるゲームエンジンです。  
+日本で浸透していないのがもったいない!!、という思いから、GameMaker Studio2の日本語情報を集めました。  
+これからゲーム開発にチャレンジする方に少しでも力添えできれば幸いです。
+
+また、サイト内で誤字脱字やバグを見つけた場合・追加したい情報などがあれば
+GitHub上でプルリクを送ってくれると幸いです。
+https://github.com/takanokana/web-gamemaker
+
+
+export default ({ children }) => (
+  <Layer>
+    <Head>
+        <title>ホーム | GameMaker Studio2 JP Club</title>
+        <meta name="description" content="GameMaker Studio2の日本語情報を発信するサイトのトップページです。"/>
+    </Head>
+    {children}
+  </Layer>
+)

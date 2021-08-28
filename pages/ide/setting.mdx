@@ -1,0 +1,46 @@
+import Image from 'next/image'
+import Head from 'next/head'
+import { Layer } from '../../components/layer'
+
+# GMS IDE日本語化の設定方法
+
+有志の方々がIDEの日本語翻訳を行ってくれており、現在(2021/8/28自転)では**翻訳率100%**となっています。  
+以下、対応方法の手順を説明します。
+
+## ダウンロード
+1. [アップローダー](https://ux.getuploader.com/gamemaker2/)にアクセスし、**「gms2japanese～.zip」**の最新のファイルにアクセスする。
+<Image src="/transition_ide/uploader_0.png" width="800" height="400" alt="最新の日付のファイルを選択" />
+
+2. **「ダウンロード」**ボタンを押す。しばらくするとzipがダウンロードされるので展開する。
+<Image src="/transition_ide/uploader_1.png" width="500" height="500" alt="" />
+
+3. GameMaker Studio2フォルダ内の**Launguageフォルダ**を探す。 
+
+- Windows Steam Desktopの場合)  C:\Steam\steamapps\common\GameMaker Studio 2 Desktop\Languages  
+- Mac Steam Desktop版の例)  $HOME/Library/Application Support/Steam/steamapps/common/GameMaker Studio 2 Desktop/GameMaker Studio 2.app/Contents/MonoBundle/Languages  
+<Image src="/transition_ide/file.png" width="800" height="400" alt="" />
+
+4. Languageフォルダに、先ほどダウンロードしたファイルの中にある**「japanese.csv」「ide_japanese_dnd.csv」を入れる。**
+
+5. GameMaker Studio2を起動する。（すでに起動していた場合は再起動する。）
+
+6. 上部ツールバーから**「Preferences」**を選択する。
+<Image src="/transition_ide/gms_0.png" width="800" height="400" alt="上部ツールバーの「GmaeMakerStudio 2」から移動" />
+7. 左メニューから**「GeneralSettings」**を選択し、IDE Languageを**「Japanese」**に選択する。
+<Image src="/transition_ide/gms_1.png" width="800" height="600" alt="" />
+8. 「OK」ボタンを押すと日本語に切り替わります。
+<Image src="/transition_ide/gms_2.png"  width="800" height="600" alt="" />
+
+## アップグレード
+ダウンロードと同じ手順でアップローダーからファイルをインストールし、
+Languagesフォルダある「japanese.csv」「ide_japanese_dnd.csv」を上書きすればOKです。
+
+export default ({ children }) => (
+  <Layer>
+    <Head>
+        <title>GMS IDE日本語化の設定方法 | GameMaker Studio2 JP Club</title>
+        <meta name="description" content="GameMaker Studio2の日本語情報を発信するサイトのIDE日本語化の設定方法ページです。"/>
+    </Head>
+    {children}
+  </Layer>
+)
