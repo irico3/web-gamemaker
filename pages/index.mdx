@@ -1,5 +1,4 @@
 import { Layer } from '../components/layer'
-import Head from 'next/head'
 
 # このサイトについて
 
@@ -13,13 +12,12 @@ import Head from 'next/head'
 GitHub上でプルリクを送ってくれると幸いです。
 https://github.com/takanokana/web-gamemaker
 
+export const meta = {
+    title: 'ホーム'
+}
 
 export default ({ children }) => (
   <Layer>
-    <Head>
-        <title>ホーム | GameMaker Studio2 JP Club</title>
-        <meta name="description" content="GameMaker Studio2の日本語情報を発信するサイトのトップページです。"/>
-    </Head>
     {children}
   </Layer>
 )

@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import Head from 'next/head'
 import { Layer } from '../../components/layer'
 
 # GMS IDE日本語化の設定方法
@@ -35,12 +34,12 @@ import { Layer } from '../../components/layer'
 ダウンロードと同じ手順でアップローダーからファイルをインストールし、
 Languagesフォルダある「japanese.csv」「ide_japanese_dnd.csv」を上書きすればOKです。
 
+export const meta = {
+    title: 'IDE日本語化の設定方法'
+}
+
 export default ({ children }) => (
   <Layer>
-    <Head>
-        <title>GMS IDE日本語化の設定方法 | GameMaker Studio2 JP Club</title>
-        <meta name="description" content="GameMaker Studio2の日本語情報を発信するサイトのIDE日本語化の設定方法ページです。"/>
-    </Head>
     {children}
   </Layer>
 )

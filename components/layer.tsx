@@ -1,10 +1,23 @@
 import { VFC, ReactNode } from 'react'
 import styled from '@emotion/styled'
+import Head from 'next/head'
 import { Box, Container } from '@chakra-ui/react'
 import { Header } from '../components/header'
 import { Footer } from '../components/footer'
-export const Layer: VFC<{ children: ReactNode }> = ({ children }) => (
+
+type LayerType = {
+  meta: {
+    title: string
+  },
+  children: ReactNode
+}
+
+export const Layer: VFC<LayerType> = ({ meta, children }) => (
   <>
+    <Head>
+      <title>{meta.title} | GameMaker Studio2 JP Club</title>
+      <meta name="description" content={`GameMaker Studio2の日本語情報を発信するサイトの${meta.title}ぺージです。`} />
+    </Head>
     <Box px={10} py={10} minH="95vh">
       <Header />
       <ContainerCss maxW="container.lg" as='main'>

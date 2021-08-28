@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import { Layer } from '../../components/layer'
-import Head from 'next/head'
 
 # GMS IDE日本語化コミュニティについて
 
@@ -15,12 +14,12 @@ https://discord.gg/7fvHhQH
 翻訳にチャレンジしたい!という方はこちらにて訳語の確認・修正などが行えます。  
 https://paratranz.cn/projects/1100
 
+export const meta = {
+    title: 'IDE日本語化コミュニティについて'
+}
+
 export default ({ children }) => (
-  <Layer>
-    <Head>
-        <title>GMS IDE日本語化コミュニティについて | GameMaker Studio2 JP Club</title>
-        <meta name="description" content="GameMaker Studio2の日本語情報を発信するサイトの日本語化コミュニティページです。"/>
-    </Head>
+  <Layer meta={meta}>   
     {children}
   </Layer>
 )
