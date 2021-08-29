@@ -1,0 +1,24 @@
+import Image from 'next/image'
+import { Layer } from '../../components/layer'
+
+# ゲーム内で日本語フォントを使用する
+
+## 設定方法
+ゲーム内で日本語を表示させるには、日本語フォントが必要となります。  
+詳しい設定方法は、こちらの[初心者でもできる!ゲーム開発](https://hellomanaki.com/japanese-in-gamemakerstudio/)さんの記事が詳しいです。
+<Image src="/transition_ide/font_demo.png" width="600" height="150" alt="実際に日本語フォントをゲーム内で表示させているデモ" />
+
+## IDE内で日本語フォントが入力できない件について
+GMS内で日本語が入力ができないので、別のテキストエディタから入力してコピーペーストして実装しています。  
+もし良い解決策ご存知の方はぜひ教えてください。
+
+
+export const meta = {
+    title: '日本語フォント'
+}
+
+export default ({ children }) => (
+  <Layer meta={meta}>
+    {children}
+  </Layer>
+)

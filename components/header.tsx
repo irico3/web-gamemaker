@@ -56,10 +56,12 @@ export const Header: VFC = () => {
           <NavLink href='/' >Home</NavLink>
           <Menu>
             <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
-              GMS IDE日本語化
+              GMS 日本語化
             </MenuButton>
             <MenuList>
-              <MenuItem><Link href='/ide/setting' w="100%">設定方法</Link></MenuItem>
+              <MenuItem><Link href='/ide/setting' w="100%">IDE日本語化設定方法</Link></MenuItem>
+              <MenuItem><Link href='/ide/font-ja' w="100%">日本語フォント</Link></MenuItem>
+              <MenuItem><Link href='/ide/document' w="100%">日本語マニュアル</Link></MenuItem>
               <MenuItem><Link href='/ide/community' w="100%">コミュニティ</Link></MenuItem>
             </MenuList>
           </Menu>

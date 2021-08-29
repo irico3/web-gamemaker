@@ -39,9 +39,6 @@ const ContainerCss = styled(Container)`
       font-size: 30px;
     }
   }
-  & h1 + * {
-    padding-top: 0;
-  }
   & h2 {
     font-size: 18px;
     font-weight: bold;
@@ -50,6 +47,7 @@ const ContainerCss = styled(Container)`
   @media only screen and (min-width: 768px) {
     & h2 {
       font-size: 23px;
+      padding-top: 30px;
     }
   }
   & p {
@@ -68,5 +66,11 @@ const ContainerCss = styled(Container)`
     &:hover {
       border-bottom: 1px solid #4783fc;
     }
+  }
+  & h1 + * {
+    padding-top: 0;
+  }
+  & h2 + * {
+    padding-top: 10px;
   }
 `
